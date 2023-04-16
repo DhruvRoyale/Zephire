@@ -1,0 +1,56 @@
+.input-form, .guess-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+h1, h4 {
+    text-align: center;
+}
+
+#text {
+    letter-spacing: 5px;
+    white-space: pre-wrap;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.letter-list {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+.wrong-letter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.wrong-letters {
+    width: 40%;
+}
+
+.used-letter {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.result {
+    margin-top: 1.5%;
+}
+
+.reset-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

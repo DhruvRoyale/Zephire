@@ -1,0 +1,70 @@
+h1 {
+    text-align: center;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+}
+
+.game-container {
+    width: 100%;
+    height: 37.5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+    background-color: #333333;
+    height: 100%;
+    width: 80%;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.game-row {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-button {
+    padding: 0px;
+    width: 7.2%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0px;
+}
+
+.reset-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+}
+
+.reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 12px;
+    background-color: #4caf50;
+    color: #f2f2f2;
+    border: none;
+    transition-duration: 0.4s;
+    font-size: 1.5em;
+    padding: 1px 15px;
+    box-sizing: content-box;
+}
+
+.reset:hover {
+    background-color: #419644;
+    transform: scale(1.02);
+}
+
+.winner {
+    margin-top: 1%;
+    text-align: center;
+}

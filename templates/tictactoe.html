@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Zephire: Tic-Tac-Toe
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/css/tictactoe.css">
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1>Tic-Tac-Toe</h1>
+
+        <div class="score-container">
+            <div class="score">
+                <div class="X-container">
+                    <table>
+                        <tr>
+                            <td id="X">X</td>
+                        </tr>
+                        <tr>
+                            <td id="X-wins">0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="O-container">
+                    <table>
+                        <tr>
+                            <td id="O">O</td>
+                        </tr>
+                        <tr>
+                            <td id="O-wins">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="start-container">
+            <button onclick="switchstarter()" id="starter">Starting With: X</button>
+        </div>
+
+        <div class="game-container">
+            <div class="game">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn1"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn2"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn3"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn4"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn5"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn6"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn7"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn8"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="game()" class="game-button" id="btn9"></button>
+            </div>
+        </div>
+
+        <div class="winner">
+            <p id="X-winner" hidden>X wins!</p>
+            <p id="O-winner" hidden>O wins!</p>
+            <p id="Tie" hidden>Tie</p>
+        </div>
+
+        <div class="reset-container">
+            <button onclick="reset()" id="reset-button" class="reset">Reset</button>
+            <button onclick="resetscore()" id="reset-score" class="reset">Reset Score</button>
+        </div>
+    </div>
+    <script src="static/js/tictactoe.js"></script>
+{% endblock %}

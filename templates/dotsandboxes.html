@@ -1,0 +1,852 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Zephire: Dots and Boxes
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/css/dotsandboxes.css">
+{% endblock %}
+
+{% block main %}
+    <div class="main-container">
+        <h1>Dots and Boxes</h1>
+
+        <div class="score-container">
+            <div class="score">
+                <div class="A-container">
+                    <table>
+                        <tr>
+                            <td id="A">A</td>
+                        </tr>
+                        <tr>
+                            <td id="A-score">0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="O-container">
+                    <table>
+                        <tr>
+                            <td id="B">B</td>
+                        </tr>
+                        <tr>
+                            <td id="B-score">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-01,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-02,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-03,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-04,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-05,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-06,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-07,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-08,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-09,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-10,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-11,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-12,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-13,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-14,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-15,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-16,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-17,39" class="corner game-item" disabled></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,01" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,02" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,03" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,04" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,05" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,06" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,07" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,08" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,09" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,10" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,11" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,12" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,13" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,14" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,15" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,16" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,17" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,18" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,19" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,20" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,21" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,22" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,23" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,24" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,25" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,26" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,27" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,28" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,29" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,30" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,31" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,32" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,33" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,34" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,35" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,36" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,37" class="vertical game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,38" class="box game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-18,39" class="vertical game-item"></button>
+            </div>
+
+            <div class="game-row">
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,01" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,02" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,03" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,04" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,05" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,06" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,07" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,08" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,09" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,10" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,11" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,12" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,13" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,14" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,15" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,16" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,17" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,18" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,19" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,20" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,21" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,22" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,23" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,24" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,25" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,26" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,27" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,28" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,29" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,30" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,31" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,32" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,33" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,34" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,35" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,36" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,37" class="corner game-item" disabled></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,38" class="horizontal game-item"></button>
+                <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" id="elm-19,39" class="corner game-item" disabled></button>
+            </div>
+        </div>
+
+        <div class="win-container">
+            <h3 id="A-wins" hidden>A wins!</h3>
+            <h3 id="B-wins" hidden>B wins!</h3>
+            <h3 id="tie" hidden>Tie</h3>
+        </div>
+
+        <div class="reset-container">
+            <button onclick="reset()" id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script src="static/js/dotsandboxes.js"></script>
+{% endblock %}

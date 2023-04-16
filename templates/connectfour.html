@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Zephire: Connect Four
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/css/connectfour.css">
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1>Connect Four</h1>
+
+        <div class="game-container">
+            <div class="game">
+                <div class="game-row">
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn11" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn12" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn13" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn14" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn15" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn16" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn17" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn18" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn19" style="background-color: #1C1C1C"></button>
+                </div>
+
+                <div class="game-row">
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn21" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn22" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn23" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn24" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn25" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn26" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn27" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn28" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn29" style="background-color: #1C1C1C"></button>
+                </div>
+
+                <div class="game-row">
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn31" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn32" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn33" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn34" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn35" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn36" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn37" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn38" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn39" style="background-color: #1C1C1C"></button>
+                </div>
+
+                <div class="game-row">
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn41" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn42" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn43" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn44" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn45" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn46" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn47" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn48" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn49" style="background-color: #1C1C1C"></button>
+                </div>
+
+                <div class="game-row">
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn51" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn52" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn53" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn54" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn55" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn56" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn57" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn58" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn59" style="background-color: #1C1C1C"></button>
+                </div>
+
+                <div class="game-row">
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn61" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn62" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn63" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn64" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn65" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn66" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn67" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn68" style="background-color: #1C1C1C"></button>
+                    <button onmouseover="hovereffect()" onmouseout="hovereffectclear()" onclick="simulategame()" class="game-button" id="btn69" style="background-color: #1C1C1C"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="winner">
+            <h2 id="red" hidden>Red Wins!</h2>
+            <h2 id="yellow" hidden>Yellow Wins!</h2>
+            <h2 id="draw" hidden>Draw</h2>
+        </div>
+
+        <div class="reset-container">
+            <button onclick="reset()" id="reset-button" class="reset">Reset</button>
+        </div>
+    </div>
+    <script src="static/js/connectfour.js"></script>
+{% endblock %}

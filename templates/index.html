@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Zephire
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/css/index.css">
+{% endblock %}
+
+{% block main %}
+    <div class="index-container">
+        <h2>Welcome to Zephire!</h2>
+
+        <h4>Please Select a game:</h4>
+
+        <div class="game-container">
+            <div class="game" id="dots-and-boxes" onclick="redirect()">
+                <span>Dots and Boxes</span>
+            </div>
+            <div class="game" id="connect-four" onclick="redirect()">
+                <span>Connect Four</span>
+            </div>
+            <div class="game" id="tic-tac-toe" onclick="redirect()">
+                <span>Tic-Tac-Toe</span>
+            </div>
+            <div class="game" id="hangman" onclick="redirect()">
+                <span>Hangman</span>
+            </div>
+            <div class="game" id="tambola" onclick="redirect()">
+                <span>Tambola Generator</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/index.js"></script>
+{% endblock %}
